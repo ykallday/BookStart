@@ -44,7 +44,7 @@ export default function Wishlist(){
             <div className="grid">
             {wishlist.map((book,index) => (
                     
-                    <div key={book.title} className="card">
+                    <div key={book.title} className="card wishCard">
                               <h3 className="card-title" onClick={() => showBook(index)}>{book.title}</h3>
                               <h4 className="year">{book.first_publish_year}</h4>
                               {book.cover_i  ?  (<img className="bookCover" src={`${image_URL}${book.cover_i}-M.jpg`} alt="No image available" onClick={() => showBook(index)}/>) : (<img className="bookCover" src={`${image_URL}${book.cover_id}-M.jpg`} alt="No image available" onClick={() => showBook(index)} />)}

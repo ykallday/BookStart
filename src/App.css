@@ -184,7 +184,7 @@ form{
   color:var(--md-sys-color-on-surface);
   display:block;
   margin: 0 auto;
-  margin-top:20%;
+  margin-top:5%;
   margin-bottom: 5%;
   padding:10px;
 }
@@ -245,6 +245,26 @@ form{
 
 .Browse-Genres:hover{
   scale:calc(0.95);
+}
+
+.bookCover{
+  margin-top:10px;
+  border-radius:15px;
+  margin-bottom:0px;
+}
+
+.big-card{
+  background-color:var(--md-sys-color-surface-variant);
+  border-radius:15px;
+  padding:20px 10px;
+  width: 90%;
+  margin: 0 auto;
+  line-height:40px;
+  height:fit-content;
+  margin-bottom:10px;}
+
+.wishCard{
+  height:fit-content;
 }
 /* 
 .footer{

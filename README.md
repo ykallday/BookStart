@@ -1,4 +1,4 @@
-#BookStart - find the next book you won't want to put down!
+#BookStart - find your next favorite book!
 ##Overall Concept
 My overall goal for this application was to create a book search application utilizing the *Open Library API*. A search bar is the main point of contact, and receives author or title based searches. There is a browse function which currently features a selection of common book genres and themes, and books may also be found via those links. 
 I created an initial mockup of the visual of the app using Figma. 
