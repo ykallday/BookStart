@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import React, { useState, useEffect, useContext } from 'react'
 import { SearchContext } from '../SearchContext'
 import { Link } from 'react-router-dom'
@@ -10,22 +10,30 @@ import axios from 'axios'
 //will need to use navigate and iD to create slugs within search results
 
 export default function BookDetail(props){
-    const { wishlist, setWishlist, list, setList } = useContext(SearchContext)
-    const [book, setBook] = useState([])
+    const { wishlist, setWishlist, list, setList, search, setSearch } = useContext(SearchContext)
+    // const [book, setBook] = useState([])
     const [details, setDetails] = useState([]);
     const [author, setAuthor] = useState([]);
-    
-  
+    const [rating, setRating] = useState([]);
+      
     let { index } = useParams();
-    console.log (index)
-    console.log(list)
+    let book = list[index]; //assigning book to selected book from previous page
+    let bookKey = book.key
+    let authorKey = book.author_key[0];
+    let authorList=book.author_name;
+    let navigate = useNavigate();
+
+
+    
    
 
-    useEffect(()=>{
-        let selectedBook = list[index];
-        setBook(selectedBook)
+    // useEffect(()=>{
+    //     let selectedBook = list[index];
+    //     setBook(selectedBook);
+    //     bookKey = book.key;
+    //     console.log(bookKey)
 
-     },  [])
+    //  },  [])
 
     const setFavorite=(book,e)=>{
         e.target.style.backgroundColor= "var(--md-sys-color-primary)"
@@ -46,7 +54,7 @@ export default function BookDetail(props){
 
     useEffect(()=>{
         const getDetails = async () => {
-            const response = await axios.get(`https://openlibrary.org${book.key}.json`);
+            const response = await axios.get(`https://openlibrary.org${bookKey}.json`);
             setDetails(response.data); //accessing BOOKS api here, assigning to details
             //accessing BOOKS api here, assigning to details
             }
@@ -55,17 +63,29 @@ export default function BookDetail(props){
 
     useEffect(()=>{
         const getAuthor = async () => {
-            const response = await axios.get(`https://openlibrary.org/authors/${book.author_key}.json`);
+            const response = await axios.get(`https://openlibrary.org/authors/${authorKey}.json`);
             setAuthor(response.data);
-            console.log(book.author_key)
             //accessing authors api here, assigning to author
        
             }
-            getAuthor();         
+            getAuthor(); 
+        
     }, [])  
 
-    console.log(book)
-
+    if (typeof(book.authors)!="string" ){
+        if (book.author_name.length > 1){
+            for (let i = 0; i <book.author_name.length; i++){
+                authorList += `${book.author_name[i]}, `
+            }    }
+    }else {
+        authorList = book.author_name;
+    }
+   
+    function moreFromAuthor(e){
+        search.query = 'q=' + e.target.value;
+        navigate('/SearchResultsV2');
+    }
+    
 
     return(
         <div>
@@ -73,14 +93,28 @@ export default function BookDetail(props){
                 <Link to="/SearchResultsV2" element="/SearchResultsV2">Back to Results</Link>
             </div>
             <div className="big-card">
-                <h1 className="card-title">{book.title}</h1>
-                <h3 className="author">By: {book.author_name}</h3>
-                <h6 className="authorBio"> About the Author: {author.bio} </h6>
-                <h4 className="year">Published: {book.first_publish_year}</h4>
-                {book.cover_i  ?  (<img className="bookCover" src={`${image_URL}${book.cover_i}-M.jpg`} alt="No image available" />) : (<img className="bookCover" src={`${image_URL}${book.cover_id}-M.jpg`} alt="No image available" />)}
-                <h5 className ="bookdetail">Summary: {details.description} </h5>
-                <button id="learnMore"><a href={`https://www.openlibrary.org${book.key}`} target="_blank">Learn More</a></button>
-                <button id="favorite" onClick={(event)=>{setFavorite(book,event)}}>Add to Wishlist</button>
+                <div className="leftside">
+                    <h1 className="card-title">{book.title}</h1>
+                    <h3 className="author">By: {authorList}</h3>
+                    {book.cover_i  ?  (<img className="bookCover" src={`${image_URL}${book.cover_i}-M.jpg`} alt="No image available" />) : (<img className="bookCover" src={`${image_URL}${book.cover_id}-M.jpg`} alt="No image available" />)}
+                    <h4> About the Author:</h4>
+                    <div className="authorBio">
+                        <h5> {author.bio} </h5></div>
+                           <button className="backTo toAuthor" value={authorKey} onClick={moreFromAuthor}>More books by this author</button>
+                </div>
+             
+                <div className = "rightside">
+                    <h3>About the Book:</h3>
+                    <h4 className="year">Published: {book.first_publish_year}</h4>
+                    <h4>Summary: </h4>
+                    <h5 className ="bookdetail">{details.description} </h5>
+                    <button id="learnMore"><a href={`https://www.openlibrary.org${bookKey}`} target="_blank">Learn More</a></button>
+                    <button id="favorite" onClick={(event)=>{setFavorite(book,event)}}>Add to Wishlist</button>
+               </div>
+                
+               
+               
+              
              </div>
                 
          </div>   

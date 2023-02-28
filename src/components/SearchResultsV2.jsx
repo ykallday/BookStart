@@ -11,6 +11,7 @@ import axios from 'axios'
 import { SearchContext } from '../SearchContext'
 import React, { useContext } from 'react'
 import { Link, useNavigate, Route, Routes } from 'react-router-dom'
+import LoadingGif from './images/Animated book.gif'
 
 
 
@@ -21,7 +22,7 @@ export default function SearchResultsV2() {
 
     const { search, setSearch, wishlist, setWishlist, list, setList } = useContext(SearchContext)
     const navigate = useNavigate();
-
+    let authorList = ""
     let input = search.query;
 
     
@@ -32,9 +33,8 @@ export default function SearchResultsV2() {
     useEffect(() => {
         const getList = async () => {
             setList(null)
-            console.log(list)
-                const response = await axios.get(`${BASE_URL}${input}&limit=20`);
-                setList(Array.from(response.data.docs));
+            const response = await axios.get(`${BASE_URL}${input}&limit=21`);
+            setList(Array.from(response.data.docs));
                 
         }
         getList();
@@ -60,8 +60,7 @@ export default function SearchResultsV2() {
         }
    
         
-  
-
+      
 
 
 
@@ -74,7 +73,8 @@ export default function SearchResultsV2() {
     if (!list){
         return(
             <div>
-                <h1>loading</h1>
+                <h1 className="loadingText">loading</h1>
+                <img src={LoadingGif}/>
             </div>
         )
     }
@@ -93,7 +93,7 @@ export default function SearchResultsV2() {
             <div className = "grid-container">
                 <div className="backTo">
                     <Link to="/SearchBar" element="/SearchBar">Back to Search</Link>
-                    <br></br><h3>Your search for "{search.query}" returned:</h3>
+                    <br></br><h3 className="resultsTextForSearch">Your search for "{search.query}" returned:</h3>
                 </div>
 
                 <div className="grid">
@@ -102,16 +102,16 @@ export default function SearchResultsV2() {
                         <div>
                             <div key={book.key} className="card">
                               <h3 className="card-title" onClick={() => showBook(index)}>{book.title}</h3>
-                              <h4 className="author">By: {book.author_name}</h4>
+                              {/* {typeof(book.author_name) != "string" && book.author_name.length > 1 ? (book.author_name.forEach(author=>authorList += `${book.author_name},  `)) : (authorList = book.author_name)}
+                              <h4 className="author">By: {authorList} </h4> */}
                               <img className="bookCover" src={`${image_URL}${book.cover_i}-M.jpg`} alt="No image available" onClick={() => showBook(index)} />
                               <button id="favorite" onClick={(event)=>{setFavorite(book,event)}}>Add to Wishlist</button>
-                        </div>
+                            </div>
                        
-                </div>
-                ))
-
-                }</div>   
-                </div>
+                        </div>
+                    ))}
+                </div>   
+            </div>
 
         )} }
   

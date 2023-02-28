@@ -18,19 +18,14 @@ function App() {
  
   return (
     <div className="App">
-    <SearchContext.Provider value = {{search, setSearch, wishlist, setWishlist, list, setList}}> 
-      
-      <div className ="Header-Container">
-        <Header/>
-      </div>
-      <div className ="Main-Container"> 
-               {/* //stores our live components we will be able to navigate to in here */}
-        <Main/>
-      </div>
-      <div>
-     
-      </div>
-    </SearchContext.Provider>
+      <SearchContext.Provider value = {{search, setSearch, wishlist, setWishlist, list, setList}}> 
+        <div className ="Header-Container">
+          <Header/>
+        </div>
+        <div className ="Main-Container"> 
+          <Main/>
+        </div>
+      </SearchContext.Provider>
    
     </div>
     
@@ -57,7 +52,7 @@ export default App;
 
 //stretch goals:
 //include a search for 'books like' which pulls in the details for a specific book
-//include multiple methods of export - as printable list, as export to note, share on social
+//include methods of export for wishlist
 //create a reference page for free, educational online tools to get or check out books
 //create a book club function which allows you to place books in a calendar month/export in readable pdf format
 
