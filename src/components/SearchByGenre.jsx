@@ -10,13 +10,13 @@ import LoadingGif from './images/Animated book.gif'
 
 
 
+
 //must have a list of books for the genre, with favorite buttons.
 
 
 export default function SearchByGenre(props){
     const navigate = useNavigate();
-    const { wishlist, setWishlist, list, setList } = useContext (SearchContext);
- 
+    const { wishlist, setWishlist, list, setList, search, setSearch } = useContext (SearchContext);
     let { genre } = useParams();
    console.log(list)
   
