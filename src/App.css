@@ -428,9 +428,11 @@ form {
 
 .authorBio {
   max-height: 100px;
- 
- 
+}
 
+.authorBio h5{
+  font-weight:500;
+  line-height: 1.5em;
 }
 
 @keyframes load {

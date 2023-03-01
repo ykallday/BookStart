@@ -14,7 +14,7 @@ export default function BookDetail(props){
     // const [book, setBook] = useState([])
     const [details, setDetails] = useState([]);
     const [author, setAuthor] = useState([]);
-    const [rating, setRating] = useState([]);
+    const [rating, setRating] = useState("");
       
     let { index } = useParams();
     let book = list[index]; //assigning book to selected book from previous page
@@ -72,6 +72,16 @@ export default function BookDetail(props){
         
     }, [])  
 
+    // useEffect(()=>{
+    //     const getRating = async () => {
+    //         const response = await axios.get(`https://openlibrary.org${bookKey}/ratings.json`);
+    //         setRating(response.results.data); //accessing BOOKS api here, assigning to details
+    //         //accessing BOOKS api here, assigning to details
+    //         }
+    //         getRating() ;         console.log(rating)
+    // }, [])  
+
+
     if (typeof(book.authors)!="string" ){
         if (book.author_name.length > 1){
             for (let i = 0; i <book.author_name.length; i++){
@@ -99,18 +109,22 @@ export default function BookDetail(props){
                     {book.cover_i  ?  (<img className="bookCover" src={`${image_URL}${book.cover_i}-M.jpg`} alt="No image available" />) : (<img className="bookCover" src={`${image_URL}${book.cover_id}-M.jpg`} alt="No image available" />)}
                     <h4> About the Author:</h4>
                     <div className="authorBio">
-                        <h5> {author.bio} </h5></div>
+                        <h5> {author.bio && typeof(author.bio)=="string" ? author.bio : "No author bio available."} </h5>
+                        </div>
                         <button className="backTo" id="toAuthor" value={authorKey} onClick={moreFromAuthor}>More books by this author</button>
-                </div>
+                    
+                    </div>
              
                 <div className = "rightside">
                     <h3>About the Book:</h3>
                     <h4 className="year">Published: {book.first_publish_year}</h4>
                     <h4>Summary: </h4>
-                    <h5 className ="bookdetail">{details.description} </h5>
+                    <h5 className="bookdetail"> {typeof(details.description)=="string" ? details.description : "No summary available."} </h5>
+                    {/* <h4>Average Reader Rating:</h4>
+                    <h5> {rating && typeof(rating)=="Number" ? rating.toFixed(2) : "No rating available."} </h5> */}
                     <button id="learnMore"><a href={`https://www.openlibrary.org${bookKey}`} target="_blank">Learn More</a></button>
                     <button id="favorite" onClick={(event)=>{setFavorite(book,event)}}>Add to Wishlist</button>
-               </div>
+                </div>
                 
                
                

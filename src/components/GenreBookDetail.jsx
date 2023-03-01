@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react'
 import { SearchContext } from '../SearchContext'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { image_URL } from '../global'
-import SearchByGenre from './SearchByGenre'
 import axios from 'axios'
 
 
@@ -23,8 +22,7 @@ export default function GenreBookDetail(props) {
     if (!authorKey){
         authorKey = "No author information."
     }
-    
-    let authorList = "No authors"
+    let authorList = ""
 
     useEffect(() => {
         const getDetails = async () => {
@@ -42,10 +40,13 @@ export default function GenreBookDetail(props) {
             //accessing authors endpoint here, assigning to author
 
         }
-        getAuthor(); console.log(authorKey)   //pulls info about the first author  
+        getAuthor();  //pulls info about the first author  
     }, [])
 
-    if (typeof (book.authors) != "string") { //multiple authors
+    if (!book.authors){
+        authorList = "No authors available"
+
+    }else if (typeof (book.authors) != "string") { //multiple authors
         if (book.authors.length > 1) {
             console.log(book.authors)
             for (let i = 0; i < book.authors.length; i++) {
