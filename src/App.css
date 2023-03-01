@@ -4,33 +4,37 @@
 @import url(./css/theme.light.css) (prefers-color-scheme: light);
 @import url(./css/theme.dark.css) (prefers-color-scheme: dark);
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
 
 * {
   margin: 0px;
-  ;
   padding: 0px;
   box-sizing: border-box;
   font-family: Inter, helvetica, sans-serif;
   font-weight: 300;
-
+  
 }
 
 .App {
   text-align: center;
   color: var(--md-sys-color-on-background);
   margin: 0 auto;
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   display: grid;
   overflow: scroll;
   justify-content: center;
+  border-radius:30px;
+
+
 }
 
 body {
   background-color: var(--md-sys-color-background);
-  border-radius: 15px;
-  border: 8px solid var(--md-sys-color-secondary-container);
+  border-radius:30px;
+ 
+  /* border-radius: 15px;
+  border: 8px solid var(--md-sys-color-secondary-container); */
 }
 
 .Header-Container {
@@ -39,10 +43,13 @@ body {
   background-position: center;
   height:350px;
   background-size: cover; 
-  width: 100vw;
+  width: 95vw;
+  margin: 0 auto;
+  margin-top:5px;
+  border-radius:30px;
 }
+
 .header-title h1{
-  font-family: Glook, serif;
   color:papayawhip;
   background-color:rgba(0,0,0,0.3);
   padding:20px;
@@ -50,9 +57,9 @@ body {
   font-size:400%;
   width: fit-content;
   margin: 0 auto;
-  
   margin-top:70px;
   border-radius:20px;
+  font-weight:600;
 
 }
 /* .header-title {
@@ -71,7 +78,7 @@ body {
   background-color: var(--md-sys-color-primary);
   padding: 10px;
   border-radius: 30px;
-  margin: 20px;
+  margin: 30px;
   font-size: 15px;
   text-decoration: none;
   color: var(--md-sys-color-on-primary);
@@ -415,11 +422,13 @@ form {
   padding: 10px;
   line-height: 1.5em;
   font-weight: 500;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .authorBio {
   max-height: 100px;
+ 
+ 
 
 }
 
