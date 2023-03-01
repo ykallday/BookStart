@@ -100,7 +100,7 @@ export default function BookDetail(props){
                     <h4> About the Author:</h4>
                     <div className="authorBio">
                         <h5> {author.bio} </h5></div>
-                           <button className="backTo toAuthor" value={authorKey} onClick={moreFromAuthor}>More books by this author</button>
+                        <button className="backTo" id="toAuthor" value={authorKey} onClick={moreFromAuthor}>More books by this author</button>
                 </div>
              
                 <div className = "rightside">

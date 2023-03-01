@@ -21,7 +21,7 @@ export default function SearchBar(){
         event.preventDefault();
         setSearch({...search, formContent:""})
         if (search.topic==="genre"){
-            navigate(`/Browse/`, search.query);
+            navigate(`/Browse/${search.query}`);
             console.log(search.topic)
         }else{
             navigate("/SearchResultsV2/");
@@ -36,7 +36,7 @@ export default function SearchBar(){
                 <label htmlFor = "SearchField"></label>
                 <input type="text" placeholder = "" id= "query" value = {search.formContent} onChange={handleChange}></input>
                 <label htmlFor="topic"></label>
-                <select id="topicList" name="topics" onChange={handleChange}>
+                <select id="topic" name="topics" onChange={handleChange} required>
                     <option id="topic" value="">Search by:</option>
                     <option id="topic" value="basic">Title/Author</option>
                     <option id="topic" value="genre">Subject/Genre</option>

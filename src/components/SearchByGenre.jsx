@@ -62,25 +62,33 @@ export default function SearchByGenre(props){
                         <img src={LoadingGif}/>
                     </div>
                 )
-            }else{return(
-            <div>
-                <div className="backTo">
-                    <Link to="/Browse" element="/Browse">Back to Browse</Link>
-                </div>
-                <div className="grid">
-                    {list.map((book,index) => (
+            }else if(list.length===0){
+                    return (
                         <div>
-                            <div key= {index} className="card" >
-                                <h3 className="card-title">{book.title}</h3>
-                                <img className="bookCover" src={`${image_URL}${book.cover_id}-M.jpg`} alt="No image available" onClick={() => showBook(index)} />
-                             <button id="favorite" onClick={(event)=>{setFavorite(book,event)}}>Add to Wishlist</button>
-                            </div>
+                            <h1> We don't seem to have any results for your request of "{search.query}." Please try again! </h1>
+                            <div className="backTo"><Link to="/SearchBar" element="/SearchBar" >Back to Search</Link></div>
                         </div>
-                    ))}
+                    )
+            }else{
+                return(
+                <div>
+                    <div className="backTo">
+                        <Link to="/Browse" element="/Browse">Back to Browse</Link>
+                    </div>
+                    <div className="grid">
+                        {list.map((book,index) => (
+                            <div>
+                                <div key= {index} className="card" >
+                                    <h3 className="card-title">{book.title}</h3>
+                                    <img className="bookCover" src={`${image_URL}${book.cover_id}-M.jpg`} alt="No image available" onClick={() => showBook(index)} />
+                                    <button id="favorite" onClick={(event)=>{setFavorite(book,event)}}>Add to Wishlist</button>
+                                </div>
+                            </div>
+                         ))}
 
-                </div>
-            </div>  
+                    </div>
+                </div>  
        
-            )}
+                )}
        
                     }

@@ -56,6 +56,7 @@ body{
 .Main-Nav a:active{
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
+  scale: calc(.9);
 }
 
 .Main-Nav a:hover{
@@ -65,7 +66,7 @@ body{
   border: 1px solid var(--md-sys-color-on-secondary-container);
   text-decoration:none;
   color: var(--md-sys-color-on-secondary-container);
-  scale: calc(.9);
+ 
 }
 
 .container-title{
@@ -90,8 +91,9 @@ body{
   border-radius: 20px;
   height:50px;
   border:transparent;
-  padding:5px;
+  padding:10px;
   color: var(--md-sys-color-on-secondary-container);
+  font-weight:600;
 }
 
 .header-title{
@@ -102,23 +104,25 @@ form{
   display:flex;
   flex-direction:column;
   font-family: Inter, helvetica, sans-serif;
+  margin: 0 auto;
 
 }
-#topicList{
+#topic{
   font-family: Inter, helvetica, sans-serif;
-  width: 20%;
+  width: 40%;
   font-size:15px;
   margin: 0 auto;
-  margin-bottom:10px;
+  margin-bottom:20px;
   border-radius:15px;
-  height: 50px;
-
+  height: 40px;
+  padding:5px;
 
 }
 
 .formDiv{
 
     width:90%;
+    max-width:600px;
     padding:10px;
     height:fit-content;
     background-color: var(--md-sys-color-primary);
@@ -139,10 +143,10 @@ form{
 
 #submit:hover{
   color:var(--md-sys-color-primary);
-  scale: calc(.9)
+  
 }
 #submit:active{
-  scale:calc(.98,);
+  scale:calc(.9);
   font-size:18px;
   background-color: var(--md-sys-color-secondary-container);
 }
@@ -217,10 +221,13 @@ form{
 #favorite:hover, #learnMore:hover{
   color:var(--md-sys-color-on-tertiary-container);
   background-color:var(--md-sys-color-tertiary-container);
-  scale:calc(.9);
+  
 }
 #learnMore:hover{
   background-color:var(--md-sys-color-secondary-container);
+}
+
+#learnMore:active, #favorite:active{
   scale:calc(.9);
 }
 
@@ -244,14 +251,21 @@ form{
   border: 1px solid var(--md-sys-color-secondary);
 }
 
-.backTo a:hover{
+.backTo a:hover, #toAuthor:hover{
   background-color:var(--md-sys-color-tertiary-container);
   color: var(--md-sys-color-on-tertiary-container);
 }
 
-.backTo a:active{
+.backTo a:active, #toAuthor:active{
   scale:calc(0.95);
 }
+
+#toAuthor{
+  font-size: 10px;
+  text-transform:capitalize;
+  padding:5px;
+}
+
 
 .Browse-Genre-Container{
   display:grid;
@@ -341,7 +355,7 @@ form{
     margin: 0 auto;
     width: auto;
     height:auto;
-    text-align:left;
+    text-align:center;
     padding:20px;
     background-color:var(--md-sys-color-surface);
     border-radius:15px;
