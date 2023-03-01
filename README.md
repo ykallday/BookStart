@@ -12,19 +12,19 @@ The open library API features thousands of books and book editions. I chose this
 This project was built using React, Javascript, and HTML/CSS and uses a variety of React Hooks, including useState, useContext, and useEffect, along with Routes and Links from the React Router DOM.
 
 ## MVP
-- [x] Make a successful API call to the OpenLibrary API and get information to properly render / display on screen 
-2. Create a search bar - [x]
-3. Landing page that routes and links to the home screen, search bar, browse page, and wishlist - [x]
-4. Create a browse page using the "subject" endpoint. This page features topics/subject-matter/genres commonly searched for. - [x]
-5. Create an 'add to wishlist' button which collects the selected books and places them in a separate wishlist page, from which you can also remove an item. - [x]
-6. Make each book found from the search page clickable to a detail page, which features more information - [x]
+- [x] 1. Make a successful API call to the OpenLibrary API and get information to properly render / display on screen 
+- [x] 2. Create a search bar 
+- [x] 3. Landing page that routes and links to the home screen, search bar, browse page, and wishlist 
+- [x] 4. Create a browse page using the "subject" endpoint. This page features topics/subject-matter/genres commonly searched for. 
+- [x] 5. Create an 'add to wishlist' button which collects the selected books and places them in a separate wishlist page, from which you can also remove an item.  
+- [x] 6. Make each book found from the search page clickable to a detail page, which features more information 
 
 ## Stretch Goals
-1. Create a drop down menu for search which either triggers a genre or subject/author search - [x]
-2. Create a book detail view for the genre search function.- [x]
-3. Create export options for the wishlist.- [ ]
-4. Create a 'more by this author' link within book details- [x]
-5. Add ratings from ratings endpoint or reviews from the book endpoint- [ ]
+- [x] 1. Create a drop down menu for search which either triggers a genre or subject/author search 
+- [x] 2. Create a book detail view for the genre search function.
+- [ ] 3. Create export options for the wishlist.
+- [x] 4. Create a 'more by this author' link within book details
+- [ ] 5. Add ratings from ratings endpoint or reviews from the book endpoint
 
 ##
 Getting Started/Installation Instructions: 
