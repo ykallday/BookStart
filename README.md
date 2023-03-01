@@ -12,7 +12,7 @@ The open library API features thousands of books and book editions. I chose this
 This project was built using React, Javascript, and HTML/CSS and uses a variety of React Hooks, including useState, useContext, and useEffect, along with Routes and Links from the React Router DOM.
 
 ## MVP
-1. Make a successful API call to the OpenLibrary API and get information to properly render / display on screen - [x]
+- [x] Make a successful API call to the OpenLibrary API and get information to properly render / display on screen 
 2. Create a search bar - [x]
 3. Landing page that routes and links to the home screen, search bar, browse page, and wishlist - [x]
 4. Create a browse page using the "subject" endpoint. This page features topics/subject-matter/genres commonly searched for. - [x]
