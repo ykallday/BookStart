@@ -15,7 +15,7 @@ This project was built using React, Javascript, and HTML/CSS and uses a variety 
 1. Make a successful API call to the OpenLibrary API and get information to properly render / display on screen
 2. Create a search bar
 3. Landing page that routes and links to the home screen, search bar, browse page, and wishlist
-4. Create a browse page. This page features topics/subject-matter/genres commonly searched for. It requires a separate base URL, and the contents of this API's json file are laid out differently.
+4. Create a browse page using the "subject" endpoint. This page features topics/subject-matter/genres commonly searched for. 
 5. Create an 'add to wishlist' button which collects the selected books and places them in a separate, navagable wishlist page, from which you can also remove an item.
 6. Make each book found from the search page clickable to a detail page, which features more information
 
@@ -24,7 +24,7 @@ This project was built using React, Javascript, and HTML/CSS and uses a variety 
 2. Create a book detail view for the genre search function.
 3. Create export options for the wishlist.
 4. Create a 'more by this author' link within book details
-5. Add ratings from ratings API
+5. Add ratings from ratings endpoint or reviews from the book endpoint
 
 ##
 Getting Started/Installation Instructions: 
