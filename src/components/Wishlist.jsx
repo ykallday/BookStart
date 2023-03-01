@@ -4,6 +4,9 @@ import { image_URL } from '../global'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
+
+
+
 //pull items from the 'wishlist' into here, in grid format
 
 export default function Wishlist(){
@@ -39,7 +42,7 @@ export default function Wishlist(){
     return(
         <div>
             <h1>Your Wishlist:</h1>
-            <div><h5 class="backTo"><Link to ="/SearchBar" element="/SearchBar">Search</Link> or <Link to ="/Browse" element="/Browse">Browse</Link> for more!</h5></div>
+            <div><h5 className="backTo"><Link to ="/SearchBar" element="/SearchBar">Search</Link> or <Link to ="/Browse" element="/Browse">Browse</Link> for more!</h5></div>
             {wishlist.length==0 ? <h2>You don't have anything in your wishlist</h2> : null}
             <div className="grid">
             {wishlist.map((book,index) => (
@@ -53,6 +56,7 @@ export default function Wishlist(){
                         
             ))}
                 </div> 
+        
         </div>
 
     )

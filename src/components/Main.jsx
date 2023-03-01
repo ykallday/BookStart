@@ -10,6 +10,7 @@ import GenreBookDetail from './GenreBookDetail'
 
 
 
+
 export default function Main(){
 
     return(
@@ -27,6 +28,7 @@ export default function Main(){
                
 
             </Routes> 
+    
         </div>
     )
 }

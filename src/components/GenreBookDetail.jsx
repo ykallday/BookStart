@@ -20,18 +20,16 @@ export default function GenreBookDetail(props) {
     const [author, setAuthor] = useState([])
     let book = list[index]; //assigning book to selected book from previous page
     let authorKey = book.authors[0].key;
-    let authorList = ""
-    let excerpt = ""
-
-
-
-
+    if (!authorKey){
+        authorKey = "No author information."
+    }
+    
+    let authorList = "No authors"
 
     useEffect(() => {
         const getDetails = async () => {
             const response = await axios.get(`https://openlibrary.org${book.key}.json`);
             setDetails(response.data);
-
             //accessing BOOKS endpoint here, assigning to details
         }
         getDetails();
@@ -86,7 +84,7 @@ export default function GenreBookDetail(props) {
     return (
         <div>
             <div className="backTo">
-                <Link to={navBack} element={SearchByGenre}>Back to Results</Link>
+                <Link to={navBack}>Back to Results</Link>
             </div>
             <div className="big-card">
                 <div className="leftside">
@@ -95,16 +93,14 @@ export default function GenreBookDetail(props) {
                     {book.cover_i ? (<img className="bookCover" src={`${image_URL}${book.cover_i}-M.jpg`} alt="No image available" />) : (<img className="bookCover" src={`${image_URL}${book.cover_id}-M.jpg`} alt="No image available" />)}
                     <h4> About the Author:</h4>
                     <div className="authorBio">
-                        <h5> {author.bio} </h5>
+                        <h5> {author.bio && typeof(author.bio)=="string" ? author.bio : "No author bio available."} </h5>
                     </div>
-                    <button className="backTo toAuthor" value={authorKey} onClick={moreFromAuthor}>More books by this author</button>
+                    <button className="backTo" id="toAuthor" value={authorKey} onClick={moreFromAuthor}>More books by this author</button>
                 </div>
                 <div className="rightside">
                     <h4 className="year">Published: {book.first_publish_year}</h4>
                     <h4>Summary:</h4>
-                    <h5 className="bookdetail"> {details.description} </h5>
-                    {/* <h4>Read an excerpt:</h4>
-                    <h5 className = "bookdetail">{excerpt}</h5> */}
+                    <h5 className="bookdetail"> {typeof(details.description)=="string" ? details.description : "No summary available."} </h5>
                     <button id="learnMore"><a href={`https://www.openlibrary.org${book.key}`} target="_blank">Learn More</a></button>
                     <button id="favorite" onClick={(event) => { setFavorite(book, event) }}>Add to Wishlist</button>
                 </div>
