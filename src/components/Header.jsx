@@ -6,7 +6,7 @@ export default function Header(){
     return(
         <div>
             <div className = "header-title">
-               <img src={logo} width="50%"/>
+               <h1>BookStart</h1>
             </div>
             <div className = "NavContainer">
                 <Nav/>

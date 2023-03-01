@@ -34,7 +34,7 @@ export default function SearchBar(){
             <h2>Search now.</h2>
              <form className="form" onSubmit={handleSubmit}>
                 <label htmlFor = "SearchField"></label>
-                <input type="text" placeholder = "" id= "query" value = {search.formContent} onChange={handleChange}></input>
+                <input type="text" placeholder="🔍" id= "query" value = {search.formContent} onChange={handleChange}></input>
                 <label htmlFor="topic"></label>
                 <select id="topic" name="topics" onChange={handleChange} required>
                     <option id="topic" value="">Search by:</option>
