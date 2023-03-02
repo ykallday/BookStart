@@ -526,10 +526,12 @@ form {
     grid-template-columns: 1fr;
     width: 80vw;
     margin: 0 auto;
-    line-height: 60px;
-    font-size: 75%;
+    line-height: 40px;
     height: fit-content;
     margin-bottom: 10px;
+  }
+  .big-card h1{
+    line-height:normal;
   }
   .container-title h1 {
     font-weight: 500;
