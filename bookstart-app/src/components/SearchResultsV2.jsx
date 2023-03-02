@@ -102,8 +102,6 @@ export default function SearchResultsV2() {
                         <div>
                             <div key={book.key} className="card">
                               <h3 className="card-title" onClick={() => showBook(index)}>{book.title}</h3>
-                              {/* {typeof(book.author_name) != "string" && book.author_name.length > 1 ? (book.author_name.forEach(author=>authorList += `${book.author_name},  `)) : (authorList = book.author_name)}
-                              <h4 className="author">By: {authorList} </h4> */}
                               <img className="bookCover" src={`${image_URL}${book.cover_i}-M.jpg`} alt="No image available" onClick={() => showBook(index)} />
                               <button id="favorite" onClick={(event)=>{setFavorite(book,event)}}>Add to Wishlist</button>
                             </div>

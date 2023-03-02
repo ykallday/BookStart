@@ -6,10 +6,10 @@ A screenshot of the homepage is below!
 ![General idea for landing page](https://file%2B.vscode-resource.vscode-cdn.net/Users/yaelkaufman/Downloads/IMG_5BFA53FCDC1F-1.jpeg?version%3D1677507243082)
 
 ## The Open Library API
-The open library API features thousands of books and book editions. I chose this API for the multitude of information it provided for each book. I am using Axios to pull this information in to my project via multiple API calls, as this API features different information 
+The open library API features thousands of books and book editions. I chose this API for the multitude of information it provided for each book. I am using Axios to pull this information in to my project via multiple API calls, as this API features different differentn information at different endpoints.  
 
 ## Technologies Used:
-This project was built using React, Javascript, and HTML/CSS and uses a variety of React Hooks, including useState, useContext, and useEffect, along with Routes and Links from the React Router DOM.
+This project was built using React, Javascript, and HTML/CSS and uses a variety of React Hooks, including useState, useContext, and useEffect, along with Routes and Links from the React Router DOM. I used Material Design Builder to assist with building a color palette for my application, as well as Google Fonts to import my font. 
 
 ## MVP
 - [x] 1. Make a successful API call to the OpenLibrary API and get information to properly render / display on screen 

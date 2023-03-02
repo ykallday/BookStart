@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Main from './components/Main'
 import { useState } from 'react'
 import { SearchContext } from './SearchContext'
+import Footer from './components/Footer'
 
 //create search context to capture search content
 
@@ -26,7 +27,7 @@ function App() {
           <Main/>
         </div>
       </SearchContext.Provider>
-   
+    <Footer/>
     </div>
     
     )}
