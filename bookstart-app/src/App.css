@@ -516,8 +516,8 @@ form {
     width: 90vw;
   }
   .grid{
-    display:flex;
-    flex-flow:column;
+    display:grid;
+    grid-template-columns: 1fr;
     margin: 0 auto;
     width:90vw;
   }
