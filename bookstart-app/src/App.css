@@ -188,7 +188,7 @@ form {
   grid-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
   width: 90vw;
-  height: 90vh;
+  height: auto;
   text-align: center;
   margin: 0 auto;
 
@@ -316,6 +316,7 @@ form {
   gap: 20px;
   margin: 20px;
   padding: 20px;
+  height: auto;
 }
 
 .Browse-Genres {
