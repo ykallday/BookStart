@@ -498,3 +498,13 @@ form {
   font-size:17px;
   margin-right:3px;
 }
+
+@media screen and (max-width:400px){
+  .Header-Container {
+    height:200px;
+  }
+
+
+}
+  
+
