@@ -524,7 +524,7 @@ form {
   .big-card {
     display: grid;
     grid-template-columns: 1fr;
-    width: fit-content;
+    width: 80vw;
     margin: 0 auto;
     line-height: 20px;
     height: fit-content;
