@@ -521,6 +521,18 @@ form {
     margin: 0 auto;
     width:90vw;
   }
+  .big-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--md-sys-color-surface-variant);
+    border-radius: 15px;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 40px;
+    height: fit-content;
+    margin-bottom: 10px;
+  
+  }
 }
   
 
