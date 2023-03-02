@@ -374,14 +374,14 @@ form {
   font-weight:700;
   text-decoration:none;
 } */
-#searchHome {
+/* #searchHome {
   width: 50%;
   padding: 10px;
   height: fit-content;
   background-color: var(--md-sys-color-primary);
   border-radius: 20px;
   margin: 0 auto;
-}
+} */
 
 .big-card {
   display: grid;
@@ -469,18 +469,19 @@ form {
   width:100%;
   text-align:center;
   font-size:10px;
+  margin:0px;
 
 }
 
 #smallSearch form{
   height:50px;
   flex-flow: row;
-  width:80%;
+  width:100%;
   margin: 0 auto;
 }
 
 #smallSearch form input{
-  width:100%;
+  width:200%;
   height: 75%;
 
 }
@@ -490,7 +491,7 @@ form {
   width:fit-content;
   padding:5px;
   height:75%;
-  font-size:17px;
+  font-size:12px;
   margin-right:3px;
 }
 
