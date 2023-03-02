@@ -496,13 +496,16 @@ form {
 
 @media screen and (max-width:400px){
   .Header-Container {
-    height:fit-content;
+    height:200px;
   }
   
   .header-title h1{
     font-size:200%;
     margin-top:40px;
     font-weight:400;
+  }
+  .Main-Nav{
+    margin-top: 100px;
   }
   .Main-Nav a {
     display:block;
