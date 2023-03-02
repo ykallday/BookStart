@@ -522,13 +522,11 @@ form {
     width:90vw;
   }
   .big-card {
-    display: grid;
     grid-template-columns: 1fr;
-    width: 60vw;
+    width: fit-content;
     margin: 0 auto;
     line-height: 20px;
     height: fit-content;
-  
     margin-bottom: 10px;
   }
   .big-card h1{
@@ -541,6 +539,7 @@ form {
   .bookCover {
     margin: 0 auto;
     border-radius: 15px;
+    
   }
   
 }
