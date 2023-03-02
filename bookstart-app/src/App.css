@@ -494,7 +494,7 @@ form {
   margin-right:3px;
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:515px){
   .Header-Container {
     height:fit-content;
   }
@@ -538,6 +538,11 @@ form {
     font-weight: 500;
     font-size: 24px;
   }
+  .bookCover {
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  
 }
   
 
