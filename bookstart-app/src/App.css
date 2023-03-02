@@ -63,11 +63,6 @@ body {
   font-weight:600;
 
 }
-/* .header-title {
-  
-  padding: 20px;
- 
-} */
 
 .Main-Nav {
   margin-top: 80px;
@@ -504,7 +499,34 @@ form {
     height:200px;
   }
 
-
+  .Header-Container {
+    padding-bottom: -50px;
+    background-image:url('./components/images/header-background.png');
+    background-position: center;
+    height:350px;
+    background-size: cover; 
+    width: 95vw;
+    margin: 0 auto;
+    margin-top:5px;
+    border-radius:30px;
+    margin-bottom:30px;
+  }
+  
+  .header-title h1{
+    font-size:200%;
+    font-weight:400;
+  }
+  .Main-Nav a {
+    background-color: var(--md-sys-color-primary);
+    padding: 10px;
+    border-radius: 30px;
+    margin: 30px;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--md-sys-color-on-primary);
+    font-weight: 500;
+    display:block;
+  }
 }
   
 
