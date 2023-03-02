@@ -64,8 +64,8 @@ export default function SearchByGenre(props) {
     } else if (list.length === 0) {
         return (
             <div>
-                <h1> We don't seem to have any results for your request of "{search.query}." Please try again! </h1>
-                <div className="backTo"><Link to="/SearchBar" element="/SearchBar" >Back to Search</Link></div>
+                <h1> We don't seem to have any results for your request of "{genre}." Please try again! </h1>
+                <div className="backTo"><Link to="/Browse" element="/Browse" >Back to Browse</Link></div>
             </div>
         )
     } else {

@@ -14,7 +14,7 @@ export default function BookDetail(props){
     // const [book, setBook] = useState([])
     const [details, setDetails] = useState([]);
     const [author, setAuthor] = useState([]);
-    const [rating, setRating] = useState("");
+    // const [rating, setRating] = useState("");
       
     let { index } = useParams();
     let book = list[index]; //assigning book to selected book from previous page
@@ -23,17 +23,6 @@ export default function BookDetail(props){
     let authorList=book.author_name;
     let navigate = useNavigate();
 
-
-    
-   
-
-    // useEffect(()=>{
-    //     let selectedBook = list[index];
-    //     setBook(selectedBook);
-    //     bookKey = book.key;
-    //     console.log(bookKey)
-
-    //  },  [])
 
     const setFavorite=(book,e)=>{
         e.target.style.backgroundColor= "var(--md-sys-color-primary)"
