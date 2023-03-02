@@ -515,6 +515,10 @@ form {
     font-weight: 400;
     width: 90vw;
   }
+  .grid{
+    grid-template-columns: 1fr;
+    width:90vw;
+  }
 }
   
 
