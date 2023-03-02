@@ -496,7 +496,7 @@ form {
 
 @media screen and (max-width:400px){
   .Header-Container {
-    height:200px;
+    height:fit-content;
   }
   
   .header-title h1{
@@ -516,7 +516,9 @@ form {
     width: 90vw;
   }
   .grid{
-    grid-template-columns: 1fr;
+    display:flex;
+    flex-flow:column;
+    margin: 0 auto;
     width:90vw;
   }
 }
