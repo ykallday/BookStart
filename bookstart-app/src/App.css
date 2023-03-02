@@ -514,6 +514,7 @@ form {
   
   .header-title h1{
     font-size:200%;
+    margin-top:40px;
     font-weight:400;
   }
   .Main-Nav a {
@@ -525,7 +526,7 @@ form {
     text-decoration: none;
     color: var(--md-sys-color-on-primary);
     font-weight: 500;
-    display:block;
+    width: 90vw;
   }
 }
   
