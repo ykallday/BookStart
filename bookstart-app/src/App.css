@@ -79,23 +79,19 @@ body {
   text-decoration: none;
   color: var(--md-sys-color-on-primary);
   font-weight: 500;
+  box-shadow: 1px 0px 2px tan;
 }
 
-.Main-Nav a:active {
-  background-color: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
-  scale: calc(.9);
+#Home:active, #Search:active, #Browse:active, #Wish:active {
+  background-color:  var(--md-sys-color-tertiary);
+  opacity:.7;
 }
 
 .Main-Nav a:hover {
-  background-color: var(--md-sys-color-secondary-container);
-  padding: 10px;
-  border-radius: 30px;
-  border: 1px solid var(--md-sys-color-on-secondary-container);
-  text-decoration: none;
-  color: var(--md-sys-color-on-secondary-container);
-
+  background-color: var(--md-sys-color-tertiary);
+  opacity: 1;
 }
+
 
 .container-title {
   text-align: center;
@@ -362,13 +358,17 @@ form {
 .footer{
   background-color: var(--md-sys-color-tertiary);
   color:var(--md-sys-color-on-tertiary);
-  height:100px;
+  height:70px;
   width:100vw;
   padding:20px;
   font-size:12px;
   font-weight:700;
   margin-top:50px;
-  
+  position:sticky;
+  bottom:0px;
+  border-bottom-left-radius:30px;
+  border-bottom-right-radius:30px;
+  opacity:.9;
 
 }
 .footer a{
