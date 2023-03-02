@@ -498,19 +498,6 @@ form {
   .Header-Container {
     height:200px;
   }
-
-  .Header-Container {
-    padding-bottom: -50px;
-    background-image:url('./components/images/header-background.png');
-    background-position: center;
-    height:350px;
-    background-size: cover; 
-    width: 95vw;
-    margin: 0 auto;
-    margin-top:5px;
-    border-radius:30px;
-    margin-bottom:30px;
-  }
   
   .header-title h1{
     font-size:200%;
@@ -518,11 +505,12 @@ form {
     font-weight:400;
   }
   .Main-Nav a {
+    display:block;
     border-radius: 15px;
     margin: 15px;
     font-size: 8px;
     font-weight: 400;
-    width: 80vw;
+    width: 90vw;
   }
 }
   
