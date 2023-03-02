@@ -526,10 +526,10 @@ form {
     grid-template-columns: 1fr;
     width: 80vw;
     margin: 0 auto;
-    line-height: 20px;
+    line-height: 60px;
+    font-size: 75%;
     height: fit-content;
     margin-bottom: 10px;
-
   }
   .container-title h1 {
     font-weight: 500;
