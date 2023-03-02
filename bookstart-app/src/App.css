@@ -496,7 +496,7 @@ form {
 
 @media screen and (max-width:400px){
   .Header-Container {
-    height:200px;
+    height:fit-content;
   }
   
   .header-title h1{
