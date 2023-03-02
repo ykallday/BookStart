@@ -1,4 +1,5 @@
 # BookStart - find your next favorite book!
+View the BookStart App Here: https://bookstart.netlify.app/ 
 ## Overall Concept
 My overall goal for this application was to create a book search application utilizing the *Open Library API*. A search bar is the main point of contact, and receives author or title based searches. There is a browse function which currently features a selection of common book genres and themes, and books may also be found via those links. 
 I created an initial mockup of the visual of the app using Figma. 
@@ -26,7 +27,3 @@ This project was built using React, Javascript, and HTML/CSS and uses a variety 
 - [x] 4. Create a 'more by this author' link within book details
 - [ ] 5. Add ratings from ratings endpoint or reviews from the book endpoint
 
-##
-Getting Started/Installation Instructions: 
-
-Contribution Guidelines: 
