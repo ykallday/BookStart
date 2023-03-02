@@ -523,7 +523,7 @@ form {
   }
   .big-card {
     grid-template-columns: 1fr;
-    width: 75vw
+    width: 75vw;
     margin: 0 auto;
     line-height: 20px;
     height: fit-content;
