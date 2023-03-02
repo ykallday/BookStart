@@ -22,7 +22,7 @@ export default function SearchResultsV2() {
 
     const { search, setSearch, wishlist, setWishlist, list, setList } = useContext(SearchContext)
     const navigate = useNavigate();
-    let authorList = ""
+    // let authorList = ""
     let input = search.query;
 
     
@@ -33,7 +33,7 @@ export default function SearchResultsV2() {
     useEffect(() => {
         const getList = async () => {
             setList(null)
-            const response = await axios.get(`${BASE_URL}${input}&limit=21`);
+            const response = await axios.get(`${BASE_URL}${input}&sort='first_publish_year desc'&limit=21`);
             setList(Array.from(response.data.docs));
                 
         }
