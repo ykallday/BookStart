@@ -4,13 +4,13 @@ View the BookStart App Here: https://bookstart.netlify.app/
 My overall goal for this application was to create a book search application utilizing the *Open Library API*. A search bar is the main point of contact, and receives author or title based searches. There is a browse function which currently features a selection of common book genres and themes, and books may also be found via those links. 
 I created an initial mockup of the visual of the app using Figma. 
 A screenshot of the homepage is below!
-![General idea for landing page](https://file%2B.vscode-resource.vscode-cdn.net/Users/yaelkaufman/Downloads/IMG_5BFA53FCDC1F-1.jpeg?version%3D1677507243082)
+![Getting Started](/bookstart-app/src/components/images/Screen%20Shot%202023-03-03%20at%206.40.44%20AM.png)
 
 ## The Open Library API
 The open library API features thousands of books and book editions. I chose this API for the multitude of information it provided for each book. I am using Axios to pull this information in to my project via multiple API calls, as this API features different differentn information at different endpoints.  
 
 ## Technologies Used:
-This project was built using React, Javascript, and HTML/CSS and uses a variety of React Hooks, including useState, useContext, and useEffect, along with Routes and Links from the React Router DOM. I used Material Design Builder to assist with building a color palette for my application, as well as Google Fonts to import my font. 
+This project was built using Axios, React, Javascript, and HTML/CSS and uses a variety of React Hooks, including useState, useContext, and useEffect, along with Routes and Links from the React Router DOM. I used Material Design Builder to assist with building a color palette for my application, as well as Google Fonts to import my font. 
 
 ## MVP
 - [x] 1. Make a successful API call to the OpenLibrary API and get information to properly render / display on screen 
