@@ -1,5 +1,3 @@
-import { useContext } from 'react'
-import { SearchContext } from '../SearchContext'
 import { useNavigate } from 'react-router-dom'
 import SearchBar from './SearchBar'
 
@@ -17,7 +15,6 @@ export default function Browse(){
     //only give a few options - each will be a clickable div that triggers a search in the subjects or genre api
     //each will also include favorite button so will need to import that wishlist context
    const navigate = useNavigate()
-   const {search, setSearch} = useContext(SearchContext)
    
    const navToGenre =(e) => {
       navigate(`/Browse/${e.target.id}`)  

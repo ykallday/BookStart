@@ -32,9 +32,6 @@
 body {
   background-color: var(--md-sys-color-background);
   border-radius:30px;
- 
-  /* border-radius: 15px;
-  border: 8px solid var(--md-sys-color-secondary-container); */
 }
 
 .Header-Container {

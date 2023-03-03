@@ -48,7 +48,6 @@ export default function GenreBookDetail(props) {
 
     }else if (typeof (book.authors) != "string") { //multiple authors
         if (book.authors.length > 1) {
-            console.log(book.authors)
             for (let i = 0; i < book.authors.length; i++) {
                 authorList += `${book.authors[i].name}, `
             }

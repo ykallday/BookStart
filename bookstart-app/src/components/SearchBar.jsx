@@ -22,10 +22,8 @@ export default function SearchBar(){
         setSearch({...search, formContent:""})
         if (search.topic==="genre"){
             navigate(`/Browse/${search.query}`);
-            console.log(search.topic)
         }else{
             navigate("/SearchResultsV2/");
-            console.log("else" + search.topic)
         }
         
     }

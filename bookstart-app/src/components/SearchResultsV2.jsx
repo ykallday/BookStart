@@ -5,12 +5,12 @@
 //render our data
 //set up guard operator
 
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { BASE_URL, image_URL } from '../global'
 import axios from 'axios'
 import { SearchContext } from '../SearchContext'
 import React, { useContext } from 'react'
-import { Link, useNavigate, Route, Routes } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import LoadingGif from './images/Animated book.gif'
 
 
@@ -38,7 +38,6 @@ export default function SearchResultsV2() {
                 
         }
         getList();
-        console.log(list)
     }, [])
 
 

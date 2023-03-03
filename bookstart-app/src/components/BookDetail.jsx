@@ -61,15 +61,6 @@ export default function BookDetail(props){
         
     }, [])  
 
-    // useEffect(()=>{
-    //     const getRating = async () => {
-    //         const response = await axios.get(`https://openlibrary.org${bookKey}/ratings.json`);
-    //         setRating(response.results.data); //accessing BOOKS api here, assigning to details
-    //         //accessing BOOKS api here, assigning to details
-    //         }
-    //         getRating() ;         console.log(rating)
-    // }, [])  
-
 
     if (typeof(book.authors)!="string" ){
         if (book.author_name.length > 1){

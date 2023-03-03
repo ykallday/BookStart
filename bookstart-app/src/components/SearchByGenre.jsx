@@ -18,14 +18,12 @@ export default function SearchByGenre(props) {
     const navigate = useNavigate();
     const { wishlist, setWishlist, list, setList, search, setSearch } = useContext(SearchContext);
     let { genre } = useParams();
-    console.log(list)
 
 
     useEffect(() => {
         const getList = async () => {
             setList(null);
             const response = await axios.get(`https://openlibrary.org/subjects/${genre}.json?&limit=21`);
-            console.log(response.data.works)
             setList(response.data.works);
         }
         getList();
