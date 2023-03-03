@@ -7,7 +7,7 @@ A screenshot of the homepage is below!
 ![Getting Started](/bookstart-app/src/components/images/Screen%20Shot%202023-03-03%20at%206.40.44%20AM.png)
 
 ## The Open Library API
-The open library API features thousands of books and book editions. I chose this API for the multitude of information it provided for each book. I am using Axios to pull this information in to my project via multiple API calls, as this API features different differentn information at different endpoints.  
+The open library API features thousands of books and book editions. I chose this API for the multitude of information it provided for each book. I am using Axios to pull this information in to my project via multiple API calls, as this API features different information at different endpoints.  
 
 ## Technologies Used:
 This project was built using Axios, React, Javascript, and HTML/CSS and uses a variety of React Hooks, including useState, useContext, and useEffect, along with Routes and Links from the React Router DOM. I used Material Design Builder to assist with building a color palette for my application, as well as Google Fonts to import my font. 

@@ -27,6 +27,8 @@ export default function SearchBar(){
         }
         
     }
+    //if author/title selected, then it updates the search value
+
     return(
         <div className="formDiv">
             <h2>Search now.</h2>

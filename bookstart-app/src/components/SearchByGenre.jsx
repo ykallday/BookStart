@@ -16,7 +16,7 @@ import LoadingGif from './images/Animated book.gif'
 
 export default function SearchByGenre(props) {
     const navigate = useNavigate();
-    const { wishlist, setWishlist, list, setList, search, setSearch } = useContext(SearchContext);
+    const { wishlist, setWishlist, list, setList } = useContext(SearchContext);
     let { genre } = useParams();
 
 
