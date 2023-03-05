@@ -24,7 +24,7 @@ export default function SearchByGenre(props) {
   
     useEffect(() => {
         const getList = async () => {
-            if (numberResults === 1){
+            if (numberResults === 21){
                 setList(null);}
             else{
                 setList(list)
@@ -106,7 +106,7 @@ export default function SearchByGenre(props) {
                     </div>
                     <div><h5>{numberResults}</h5></div>
                     <div id="next-page-btn">
-                    <button className="page-btn" onClick={switchPage} value="next">Show More Results</button>
+                        <button className="page-btn" onClick={switchPage} value="next">Show More Results</button>
                     </div>
                 </div>
             </div>

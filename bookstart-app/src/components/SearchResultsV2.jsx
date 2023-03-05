@@ -5,11 +5,10 @@
 //render our data
 //set up guard operator
 
-import { useEffect } from 'react'
 import { BASE_URL, image_URL } from '../global'
 import axios from 'axios'
 import { SearchContext } from '../SearchContext'
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import LoadingGif from './images/Animated book.gif'
 
@@ -24,6 +23,9 @@ export default function SearchResultsV2() {
     const navigate = useNavigate();
     // let authorList = ""
     let input = search.query;
+    const numberResultsPerPage = 21;
+    const [numberResults, setNumberResults] = useState(21)
+    let page = 1;
 
     
     const showBook = (index)=>{
@@ -32,15 +34,31 @@ export default function SearchResultsV2() {
 
     useEffect(() => {
         const getList = async () => {
-            setList(null)
-            const response = await axios.get(`${BASE_URL}${input}&limit=21`);
+            if (numberResults === 21){
+                setList(null);}
+            else{
+                setList(list)
+            }
+            const response = await axios.get(`${BASE_URL}${input}&limit=${numberResults}`);
             setList(Array.from(response.data.docs));
                 
         }
         getList();
-    }, [])
+    }, [numberResults])
 
-
+    const switchPage=(e)=>{
+        if (page === 0){
+            page++;
+        }
+        if (e.target.value == "next"){
+            page++;
+            setNumberResults(numberResultsPerPage * page);
+        }else{
+            page--
+            setNumberResults(numberResultsPerPage * page);
+        }
+       
+    }
 
     const setFavorite=(book,e)=>{
         e.target.style.backgroundColor= "var(--md-sys-color-primary)"
@@ -107,6 +125,13 @@ export default function SearchResultsV2() {
                        
                         </div>
                     ))}
+                    <div id="previous-page-btn">
+                        <button className="page-btn" onClick={switchPage} value="previous"> Show Fewer Results</button>
+                    </div>
+                    <div><h5>{numberResults}</h5></div>
+                    <div id="next-page-btn">
+                        <button className="page-btn" onClick={switchPage} value="next">Show More Results</button>
+                    </div>
                 </div>   
             </div>
 
