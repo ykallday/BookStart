@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import React, { useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { SearchContext } from '../SearchContext'
 import { image_URL } from '../global'
 import LoadingGif from './images/Animated book.gif'
@@ -15,20 +15,39 @@ import LoadingGif from './images/Animated book.gif'
 
 
 export default function SearchByGenre(props) {
+    const numberResultsPerPage = 21;
+    const [numberResults, setNumberResults] = useState(21)
+    let page =1;
     const navigate = useNavigate();
     const { wishlist, setWishlist, list, setList } = useContext(SearchContext);
     let { genre } = useParams();
-
-
+  
     useEffect(() => {
         const getList = async () => {
-            setList(null);
-            const response = await axios.get(`https://openlibrary.org/subjects/${genre}.json?&limit=21`);
+            if (numberResults === 1){
+                setList(null);}
+            else{
+                setList(list)
+            }
+            const response = await axios.get(`https://openlibrary.org/subjects/${genre}.json?&limit=${numberResults}`);
             setList(response.data.works);
         }
         getList();
-    }, [])
+    }, [numberResults, page])
 
+    const switchPage=(e)=>{
+        if (page === 0){
+            page++;
+        }
+        if (e.target.value == "next"){
+            page++;
+            setNumberResults(numberResultsPerPage * page);
+        }else{
+            page--
+            setNumberResults(numberResultsPerPage * page);
+        }
+       
+    }
 
     const showBook = (index) => {
         navigate(`${index}`)
@@ -82,7 +101,13 @@ export default function SearchByGenre(props) {
                             </div>
                         </div>
                     ))}
-
+                    <div id="previous-page-btn">
+                        <button className="page-btn" onClick={switchPage} value="previous"> Show Fewer Results</button>
+                    </div>
+                    <div><h5>{numberResults}</h5></div>
+                    <div id="next-page-btn">
+                    <button className="page-btn" onClick={switchPage} value="next">Show More Results</button>
+                    </div>
                 </div>
             </div>
 

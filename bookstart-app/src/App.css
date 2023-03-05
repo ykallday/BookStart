@@ -458,6 +458,12 @@ form {
   animation-iteration-count: infinite;
   color: var(--md-sys-color-primary)
 }
+#hidepagechange{
+  display:hidden;
+}
+#showpagechange{
+  display:visible;
+}
 
 #smallSearch{
   width:100%;
@@ -488,6 +494,26 @@ form {
   font-size:12px;
   margin-right:3px;
 }
+
+.page-btn{
+  padding: 7px;
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--md-sys-color-tertiary);
+  background-color: var(--md-sys-color-on-secondary);
+  border-radius: 20px;
+  text-decoration: none;
+  border: 1px solid var(--md-sys-color-secondary);
+}
+.page-btn:hover{
+  background-color: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
+}
+
+.page-btn:active {
+  scale: calc(0.95);
+}
+
 
 @media screen and (max-width:515px){
   .Header-Container {
