@@ -104,7 +104,7 @@ export default function SearchByGenre(props) {
                     <div id="previous-page-btn">
                         <button className="page-btn" onClick={switchPage} value="previous"> Show Fewer Results</button>
                     </div>
-                    <div><h5>{numberResults}</h5></div>
+                    <div><h4>{numberResults}</h4></div>
                     <div id="next-page-btn">
                         <button className="page-btn" onClick={switchPage} value="next">Show More Results</button>
                     </div>

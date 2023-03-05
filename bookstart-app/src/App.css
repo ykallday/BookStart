@@ -521,20 +521,22 @@ form {
   }
   
   .header-title h1{
-    font-size:200%;
-    margin-top:40px;
+    font-size:300%;
+    margin-top:50px;
     font-weight:400;
   }
   .Main-Nav{
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .Main-Nav a {
     display:block;
     border-radius: 15px;
-    margin: 15px;
-    font-size: 8px;
+    margin: 0 auto;
+    margin-bottom:15px;
+    font-size: 12px;
     font-weight: 400;
-    width: 90vw;
+    width: 50vw;
+
   }
   .grid{
     display:grid;
@@ -555,14 +557,32 @@ form {
   }
   .container-title h1 {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 30px;
+    line-height: 150%;
   }
   .bookCover {
     margin: 0 auto;
+    margin-top:20px;
+    margin-bottom:20px;
     border-radius: 15px;
-    
+  }
+
+  .authorBio, .bookdetail{
+    margin-top:20px;
   }
   
+  #toAuthor{
+    width:fit-content;
+  }
+
+  .year{
+    margin:5px;
+  }
+  .backTo{
+    margin-bottom:20px;
+    width:auto;
+    padding:2px;
+  }
 }
   
 
