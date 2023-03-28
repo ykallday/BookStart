@@ -12,4 +12,12 @@ The open library API features thousands of books and book editions. I chose this
 ## Technologies Used:
 This project was built using Axios, React, Javascript, and HTML/CSS and uses a variety of React Hooks, including useState, useContext, and useEffect, along with Routes and Links from the React Router DOM. I used Material Design Builder to assist with building a color palette for my application, as well as Google Fonts to import my font. I used Netfliy to deploy this app.
 
-## Getting Started
+## Getting Started:
+To get started with BookStart, follow these steps:
+-Fork and clone this repository in your CLI
+-Navigate to the directory you just cloned
+-Run npm install to install necessary components
+-Run npm start to run the app in localhost
+
+## Contribution Guideline:
+If you are interested in contributing, please contact me.
