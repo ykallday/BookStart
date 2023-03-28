@@ -14,10 +14,10 @@ This project was built using Axios, React, Javascript, and HTML/CSS and uses a v
 
 ## Getting Started:
 To get started with BookStart, follow these steps:
--Fork and clone this repository in your CLI
--Navigate to the directory you just cloned
--Run npm install to install necessary components
--Run npm start to run the app in localhost
+1. Fork and clone this repository in your CLI
+2. Navigate to the directory you just cloned
+3. Run npm install to install necessary components
+4. Run npm start to run the app in localhost
 
 ## Contribution Guideline:
 If you are interested in contributing, please contact me.
